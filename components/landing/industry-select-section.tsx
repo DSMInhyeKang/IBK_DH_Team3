@@ -31,7 +31,7 @@ function ChoiceCard({
       className={`group relative flex flex-1 flex-col items-center gap-4 rounded-3xl border-2 p-8 text-center transition-all duration-300 ${
         active
           ? `${card.accentBorder} ${card.accentBgSoft} shadow-lg backdrop-blur-md`
-          : 'glass-card hover:-translate-y-1 hover:shadow-lg'
+          : `glass-card glow-hover ${card.accentGlow}`
       }`}
     >
       {active && (
@@ -59,19 +59,21 @@ function ChoiceCard({
 function BenefitBlock({
   item,
   accentText,
+  accentGlow,
   special,
 }: {
   item: BenefitItem
   accentText: string
+  accentGlow: string
   special?: boolean
 }) {
   const example = Math.min(item.example * 0.02, ITEM_CAP)
   return (
     <div
-      className={`group relative flex items-center gap-3 rounded-2xl border p-4 transition-colors ${
+      className={`group relative flex h-full items-center gap-3 rounded-2xl p-4 ${
         special
           ? 'border border-point/40 bg-point/10 backdrop-blur-md'
-          : 'glass-card hover:border-foreground/15'
+          : `glass-card glow-hover ${accentGlow}`
       }`}
     >
       <span
@@ -176,12 +178,13 @@ export function IndustrySelectSection({
                   <CountUp value={2} suffix="%" format={false} />
                 </p>
               </div>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:gap-2.5">
+              <div className="mt-5 grid auto-rows-fr gap-3 sm:grid-cols-2 lg:gap-2.5">
                 {items.map((item) => (
                   <BenefitBlock
                     key={item.id}
                     item={item}
                     accentText={card.accentText}
+                    accentGlow={card.accentGlow}
                     special={item.id === card.specialItem.id}
                   />
                 ))}

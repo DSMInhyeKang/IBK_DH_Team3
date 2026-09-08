@@ -15,7 +15,7 @@ const conditions = [
 function ApplyCard({ cardId }: { cardId: CardId }) {
   const card = CARDS[cardId]
   return (
-    <div className="glass-panel flex flex-col items-center rounded-3xl p-8 text-center transition-all hover:-translate-y-1 hover:shadow-2xl">
+    <div className={`glass-panel glow-hover ${card.accentGlow} flex flex-col items-center rounded-3xl p-8 text-center`}>
       <div className="w-52">
         <Image
           src={card.image}

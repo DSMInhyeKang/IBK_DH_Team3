@@ -52,6 +52,7 @@ export type CardConfig = {
   accentBgSoft: string
   accentBorder: string
   accentRing: string
+  accentGlow: string
   heroGradient: string
   panelGradient: string
 }
@@ -81,6 +82,7 @@ export const CARDS: Record<CardId, CardConfig> = {
     accentBgSoft: 'bg-brand-retail/8',
     accentBorder: 'border-brand-retail',
     accentRing: 'ring-brand-retail',
+    accentGlow: 'glow-retail',
     heroGradient: 'from-[#0891b2] via-[#22b8cf] to-[#2f7ff0]',
     panelGradient: 'from-[#0a99b8] via-[#1ba7cf] to-[#2f6ff0]',
   },
@@ -108,6 +110,7 @@ export const CARDS: Record<CardId, CardConfig> = {
     accentBgSoft: 'bg-brand-fnb/8',
     accentBorder: 'border-brand-fnb',
     accentRing: 'ring-brand-fnb',
+    accentGlow: 'glow-fnb',
     heroGradient: 'from-[#3b82f6] via-[#5b74f2] to-[#8a5cf0]',
     panelGradient: 'from-[#3576f5] via-[#5a6ff2] to-[#8455f0]',
   },
