@@ -1,11 +1,17 @@
+import Image from 'next/image'
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-secondary/50">
       <div className="mx-auto max-w-6xl px-5 py-14">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="flex h-8 items-center rounded-md bg-primary px-2 text-sm font-black text-primary-foreground">
-            IBK
-          </span>
+          <Image
+            src="/ibk-logo.png"
+            alt="IBK 기업은행"
+            width={40}
+            height={38}
+            className="h-8 w-auto"
+          />
           <span className="text-sm font-bold text-ink">기업은행</span>
         </div>
 

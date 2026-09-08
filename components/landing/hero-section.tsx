@@ -35,9 +35,13 @@ export function HeroSection() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:pb-28 lg:pt-24">
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-ink shadow-sm backdrop-blur">
-            <span className="rounded bg-primary px-1.5 py-0.5 text-[10px] font-black text-primary-foreground">
-              IBK
-            </span>
+            <Image
+              src="/ibk-logo.png"
+              alt="IBK 기업은행"
+              width={20}
+              height={19}
+              className="h-4 w-auto"
+            />
             개인사업자 특화카드
           </div>
 

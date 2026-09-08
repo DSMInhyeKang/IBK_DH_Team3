@@ -1,13 +1,20 @@
 'use client'
 
+import Image from 'next/image'
+
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="flex h-8 items-center rounded-md bg-primary px-2 text-sm font-black tracking-tight text-primary-foreground">
-            IBK
-          </span>
+          <Image
+            src="/ibk-logo.png"
+            alt="IBK 기업은행"
+            width={40}
+            height={38}
+            className="h-8 w-auto"
+            priority
+          />
           <span className="text-sm font-bold text-ink">
             개인사업자 특화카드
           </span>
