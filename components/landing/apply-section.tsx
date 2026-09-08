@@ -15,7 +15,7 @@ const conditions = [
 function ApplyCard({ cardId }: { cardId: CardId }) {
   const card = CARDS[cardId]
   return (
-    <div className="flex flex-col items-center rounded-3xl border border-border bg-card p-8 text-center transition-shadow hover:shadow-lg">
+    <div className="glass-panel flex flex-col items-center rounded-3xl p-8 text-center transition-all hover:-translate-y-1 hover:shadow-2xl">
       <div className="w-52">
         <Image
           src={card.image}
@@ -64,7 +64,7 @@ export function ApplySection() {
         <ApplyCard cardId="fnb" />
       </div>
 
-      <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-border bg-secondary/60 p-6">
+      <div className="glass-card mx-auto mt-8 max-w-3xl rounded-2xl p-6">
         <ul className="grid gap-3 sm:grid-cols-2">
           {conditions.map((c) => (
             <li

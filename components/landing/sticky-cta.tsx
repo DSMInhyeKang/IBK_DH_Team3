@@ -23,7 +23,7 @@ export function StickyCta({ selectedCard }: { selectedCard: CardId }) {
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 pb-4">
-        <div className="flex items-center gap-3 rounded-2xl border border-border bg-background/95 p-3 shadow-2xl backdrop-blur">
+        <div className="flex items-center gap-3 rounded-2xl border border-white/45 bg-background/70 p-3 shadow-2xl backdrop-blur-xl backdrop-saturate-150">
           <p className="ml-2 hidden text-sm font-bold text-ink sm:block">
             선택하신 <span className={card.accentText}>{card.name}</span>,
             지금 신청하세요

@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import { CountUp } from '@/components/count-up'
 import {
   CARDS,
+  formatCompactWon,
   formatWon,
   getItemsForCard,
   itemReward,
@@ -32,7 +33,7 @@ function NumberInput({
           const next = digits ? Number.parseInt(digits, 10) : 0
           onChange(Math.min(next, 99_999_999))
         }}
-        className={`w-full rounded-xl border border-border bg-background py-3 pl-4 pr-10 text-right text-base font-bold text-ink outline-none transition-shadow focus:ring-2 ${accentRing}`}
+        className={`w-full rounded-xl border border-white/50 bg-white/50 py-3 pl-4 pr-10 text-right text-base font-bold text-ink outline-none backdrop-blur-md transition-shadow focus:ring-2 ${accentRing}`}
       />
       <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-muted-foreground">
         원
@@ -92,7 +93,7 @@ export function SimulationSection({
       </div>
 
       {/* 카드 선택 토글 */}
-      <div className="mt-8 inline-flex rounded-full border border-border bg-secondary p-1">
+      <div className="glass-chip mt-8 inline-flex rounded-full p-1">
         {(['retail', 'fnb'] as CardId[]).map((id) => {
           const c = CARDS[id]
           const active = selectedCard === id
@@ -116,7 +117,7 @@ export function SimulationSection({
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1fr]">
         {/* 입력 */}
-        <div className="rounded-3xl border border-border bg-card p-6 sm:p-8">
+        <div className="glass-panel rounded-3xl p-6 sm:p-8">
           <p className="text-sm font-bold text-ink">월 사용금액 입력</p>
           <div className="mt-5 space-y-4">
             {items.map((item) => {
@@ -151,7 +152,7 @@ export function SimulationSection({
               총 이용금액
             </span>
             <span className="text-lg font-black text-ink">
-              <CountUp value={totalSpend} duration={500} />원
+              {formatCompactWon(totalSpend)}
             </span>
           </div>
         </div>
@@ -164,7 +165,7 @@ export function SimulationSection({
             <p className="text-sm font-semibold text-white/70">
               {card.name} 사장님의 예상 월 적립
             </p>
-            <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">
+            <span className="rounded-full bg-white/15 px-3 py-1 text-sm font-semibold">
               전월실적 100만원 이상 기준
             </span>
           </div>
@@ -173,7 +174,7 @@ export function SimulationSection({
             <CountUp
               value={total}
               duration={700}
-              className="text-6xl font-black tracking-tighter text-[color:var(--point)] sm:text-7xl"
+              className="text-6xl font-black tracking-tighter text-[color:var(--point)] sm:text-6xl"
             />
             <span className="text-3xl font-black text-[color:var(--point)]">
               P
@@ -185,7 +186,7 @@ export function SimulationSection({
             {items.map((item) => (
               <div
                 key={item.id}
-                className="flex items-center justify-between text-sm"
+                className="flex items-center justify-between text-md"
               >
                 <span className="text-white/70">{item.label}</span>
                 <span className="font-bold">
@@ -201,7 +202,7 @@ export function SimulationSection({
 
           {/* 비교 그래프 */}
           <div className="mt-7 border-t border-white/15 pt-6">
-            <div className="mb-2 flex justify-between text-xs font-semibold">
+            <div className="mb-2 flex justify-between text-md font-semibold">
               <span className="text-white/70">현재 예상 적립</span>
               <span>{formatWon(total)}P</span>
             </div>
@@ -211,7 +212,7 @@ export function SimulationSection({
                 style={{ width: `${progress}%` }}
               />
             </div>
-            <div className="mb-2 mt-4 flex justify-between text-xs font-semibold">
+            <div className="mb-2 mt-4 flex justify-between text-md font-semibold">
               <span className="text-white/70">사업영역 월 최대 적립</span>
               <span>{formatWon(TOTAL_CAP)}P</span>
             </div>
@@ -224,7 +225,7 @@ export function SimulationSection({
             사장님의 사업비라면, 월 최대 {formatWon(TOTAL_CAP)}P까지 적립할 수
             있습니다.
           </p>
-          <p className="mt-2 text-xs leading-relaxed text-white/50">
+          <p className="mt-2 text-sm leading-relaxed text-white/50">
             ※ 전월실적 및 적립 대상 거래 등 카드 이용조건을 충족하고 적립한도 내에서
             적용됩니다. 실제 수치는 최신 상품설명서 기준으로 확인하세요.
           </p>
@@ -232,7 +233,7 @@ export function SimulationSection({
       </div>
 
       {/* 카드별 최대 혜택 강조 */}
-      <div className="mt-6 rounded-3xl border border-border bg-card p-6 text-center sm:p-8">
+      <div className="glass-panel mt-6 rounded-3xl p-6 text-center sm:p-8">
         <p className={`text-lg font-black sm:text-xl ${card.accentText}`}>
           {card.oneLiner}
         </p>

@@ -15,10 +15,10 @@ function RateCard({
 }) {
   return (
     <div
-      className={`flex flex-col justify-between rounded-2xl border p-6 ${
+      className={`flex flex-col justify-between rounded-2xl p-6 ${
         highlight
-          ? 'border-primary/30 bg-primary text-primary-foreground'
-          : 'border-border bg-card'
+          ? 'border border-primary/30 bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 backdrop-blur-md'
+          : 'glass-card'
       }`}
     >
       <span
@@ -56,17 +56,17 @@ export function CoreBenefitsSection() {
 
       {/* 한도 안내 */}
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-2xl border border-border bg-card p-6">
+        <div className="glass-card rounded-2xl p-6">
           <p className="text-sm text-muted-foreground">전월실적 조건</p>
           <p className="mt-2 text-xl font-bold text-ink">100만원 이상</p>
         </div>
-        <div className="rounded-2xl border border-border bg-card p-6">
+        <div className="glass-card rounded-2xl p-6">
           <p className="text-sm text-muted-foreground">각 항목별 월 최대</p>
           <p className="mt-2 text-xl font-bold text-ink">
             <CountUp value={50000} />P
           </p>
         </div>
-        <div className="rounded-2xl border border-point/40 bg-point/10 p-6">
+        <div className="rounded-2xl border border-point/40 bg-point/10 p-6 backdrop-blur-md">
           <p className="text-sm text-point-foreground/70">사업영역 통합 월 최대</p>
           <p className="mt-2 text-xl font-black text-point-foreground">
             <CountUp value={200000} />P
@@ -75,7 +75,7 @@ export function CoreBenefitsSection() {
       </div>
 
       {/* 혜택 구조 시각화 */}
-      <div className="mt-16 overflow-hidden rounded-3xl border border-border bg-card">
+      <div className="glass-panel mt-16 overflow-hidden rounded-3xl">
         <div className="grid lg:grid-cols-[1fr_auto_1fr]">
           <div className="p-8">
             <p className="text-sm font-bold text-muted-foreground">

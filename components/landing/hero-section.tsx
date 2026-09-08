@@ -100,7 +100,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative mt-16">
           <div className="relative mx-auto flex max-w-md items-center justify-center">
             <div className="relative w-[62%] -rotate-6 transition-transform duration-500 hover:-translate-y-2">
               <Image
@@ -124,7 +124,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-2.5">
+          <div className="mt-24 flex flex-wrap justify-center gap-2.5">
             {expenseIcons.map(({ icon: Icon, label }) => (
               <span
                 key={label}

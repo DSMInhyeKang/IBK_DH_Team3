@@ -9,7 +9,7 @@ export function VideoSection() {
   const [playing, setPlaying] = useState(false)
 
   return (
-    <section className="bg-secondary/40 py-20 lg:py-28">
+    <section className="bg-secondary/20 py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-primary">
@@ -79,7 +79,7 @@ export function VideoSection() {
             </p>
             <a
               href="#simulation"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-bold text-ink transition-colors hover:bg-secondary"
+              className="glass-chip inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-ink transition-transform hover:-translate-y-0.5"
             >
               <RotateCcw className="h-4 w-4" />
               적립 혜택 다시 계산하기
