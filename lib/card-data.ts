@@ -81,8 +81,8 @@ export const CARDS: Record<CardId, CardConfig> = {
     accentBgSoft: 'bg-brand-retail/8',
     accentBorder: 'border-brand-retail',
     accentRing: 'ring-brand-retail',
-    heroGradient: 'from-[#0f1e42] via-[#1b336e] to-[#2f57b3]',
-    panelGradient: 'from-[#101f44] to-[#274a9c]',
+    heroGradient: 'from-[#0891b2] via-[#22b8cf] to-[#2f7ff0]',
+    panelGradient: 'from-[#0a99b8] via-[#1ba7cf] to-[#2f6ff0]',
   },
   fnb: {
     id: 'fnb',
@@ -108,8 +108,8 @@ export const CARDS: Record<CardId, CardConfig> = {
     accentBgSoft: 'bg-brand-fnb/8',
     accentBorder: 'border-brand-fnb',
     accentRing: 'ring-brand-fnb',
-    heroGradient: 'from-[#053029] via-[#0c5148] to-[#12897a]',
-    panelGradient: 'from-[#06342d] to-[#0f6f62]',
+    heroGradient: 'from-[#3b82f6] via-[#5b74f2] to-[#8a5cf0]',
+    panelGradient: 'from-[#3576f5] via-[#5a6ff2] to-[#8455f0]',
   },
 }
 

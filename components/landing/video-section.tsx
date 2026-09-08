@@ -26,7 +26,7 @@ export function VideoSection() {
         </div>
 
         <div className="mx-auto mt-10 max-w-3xl">
-          <div className="relative aspect-video overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-[#0c1a3c] to-[#1b336e]">
+          <div className="relative aspect-video overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-[#22b8cf] via-[#5b74f2] to-[#8a5cf0]">
             {playing ? (
               <video
                 className="h-full w-full"
