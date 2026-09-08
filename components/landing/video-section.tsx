@@ -73,7 +73,7 @@ export function VideoSection() {
 
           <div className="mt-6 flex flex-col items-center gap-3 text-center">
             <p className="text-sm font-semibold text-ink">
-              영상으로 확인했다면, 내 사업비로 직접 계산해 보세요.
+              영상으로 확인했다면, 실 지출금액으로 직접 계산해 보세요.
             </p>
             <a
               href="#simulation"

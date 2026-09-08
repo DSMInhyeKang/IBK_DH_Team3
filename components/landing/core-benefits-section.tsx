@@ -41,9 +41,9 @@ export function CoreBenefitsSection() {
           01 &nbsp;핵심 혜택
         </p>
         <h2 className="mt-3 text-balance text-3xl font-black leading-tight tracking-tight text-ink sm:text-4xl">
-          사장님의 업종에 맞는 카드라면,
+          사용처별 결제금액을
           <br />
-          자주 쓰는 사업비부터 달라집니다.
+          포인트로 적립해드립니다.
         </h2>
       </div>
 

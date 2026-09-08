@@ -9,7 +9,7 @@ const conditions = [
   '사업영역 2% 적립',
   '사업영역 통합 월 최대 20만P',
   '카드별 특화 혜택 2%',
-  '연회비 BC/Master 23,000원 / 25,000원',
+  "연회비: BC(국내전용) 23,000원 / Master 25,000원",
 ]
 
 function ApplyCard({ cardId }: { cardId: CardId }) {
@@ -50,12 +50,12 @@ export function ApplySection() {
           06 &nbsp;카드 신청하기
         </p>
         <h2 className="mt-3 text-balance text-3xl font-black leading-tight tracking-tight text-ink sm:text-4xl">
-          사장님의 사업에 맞는
+          내 사업에 적합한
           <br />
           IBK 카드를 만나보세요.
         </h2>
         <p className="mt-4 text-pretty text-base text-muted-foreground">
-          내 사업에 맞는 카드, 지금 신청하세요.
+          내 사업에 꼭 맞는 카드, 지금 신청하세요.
         </p>
       </div>
 

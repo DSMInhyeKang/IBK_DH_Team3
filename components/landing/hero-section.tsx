@@ -32,7 +32,7 @@ export function HeroSection() {
       <div className="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full bg-[#7c8cff] opacity-30 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 top-10 h-72 w-72 rounded-full bg-[#4fd0e0] opacity-30 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-[#c79bff] opacity-25 blur-3xl" />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:pb-28 lg:pt-24">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-36 px-5 pb-20 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:pb-28 lg:pt-14">
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-ink shadow-sm backdrop-blur">
             <Image
@@ -45,17 +45,18 @@ export function HeroSection() {
             개인사업자 특화카드
           </div>
 
-          <h1 className="text-balance text-4xl font-black leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
-            사장님의 사업비,
+          <h1 className="mt-4 text-balance text-4xl font-black leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
+            매일 쓰는 사업비,
             <br />
-            그냥 비용으로
+            이제 매일의 혜택으로
             <br />
-            끝내지 마세요.
           </h1>
 
           <p className="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            사업의 업종에 맞춰 혜택을 더한
-            <br className="hidden sm:block" /> IBK 개인사업자 특화카드
+            {/* 사업자별 업종에 맞춰 혜택을 더한
+            <br className="hidden sm:block" /> IBK 개인사업자 특화카드 */}
+            사업에 필요한 지출을 더 알뜰하게
+            <br className="hidden sm:block" />IBK 개인사업자 특화카드
           </p>
 
           <div className="mt-7 flex flex-wrap items-center gap-2.5">
@@ -77,9 +78,9 @@ export function HeroSection() {
               />
             </div>
             <div className="mb-2">
-              <p className="text-lg font-bold text-ink">사업영역 적립</p>
+              <p className="text-lg font-bold text-ink">영역별 적립</p>
               <p className="text-sm text-muted-foreground">
-                자주 쓰는 사업비부터 달라집니다
+                사업에 필요한 지출을 혜택으로 전환
               </p>
             </div>
           </div>
@@ -100,7 +101,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mt-16">
+        <div className="relative mt-24">
           <div className="relative mx-auto flex max-w-md items-center justify-center">
             <div className="relative w-[62%] -rotate-6 transition-transform duration-500 hover:-translate-y-2">
               <Image

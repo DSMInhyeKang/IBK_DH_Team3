@@ -82,12 +82,12 @@ export function SimulationSection({
           04 &nbsp;혜택 시뮬레이션
         </p>
         <h2 className="mt-3 text-balance text-3xl font-black leading-tight tracking-tight text-ink sm:text-4xl">
-          사장님의 사업비,
+          사업비 지출금액,
           <br />
           직접 입력해서 확인해 보세요.
         </h2>
         <p className="mt-4 text-pretty text-base text-muted-foreground">
-          한 달에 실제로 사용하는 금액을 입력하면 {card.name}의 예상 적립P를
+          매월 지출하는 금액을 입력하면 {card.name} 카드의 예상 적립 포인트를
           계산해드립니다.
         </p>
       </div>
@@ -118,7 +118,7 @@ export function SimulationSection({
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1fr]">
         {/* 입력 */}
         <div className="glass-panel rounded-3xl p-6 sm:p-8">
-          <p className="text-sm font-bold text-ink">월 사용금액 입력</p>
+          <p className="text-sm font-bold text-ink">월 지출금액 입력</p>
           <div className="mt-5 space-y-4">
             {items.map((item) => {
               const special = item.id === card.specialItem.id
@@ -163,7 +163,7 @@ export function SimulationSection({
         >
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="text-md font-semibold text-white/70">
-              {card.name} 사장님의 예상 월 적립
+              {card.name} 카드 예상 적립 포인트
             </p>
             <span className="rounded-full bg-white/15 px-3 py-1 text-sm font-semibold">
               전월실적 100만원 이상 기준
@@ -222,7 +222,7 @@ export function SimulationSection({
           </div>
 
           <p className="mt-6 text-pretty text-sm font-bold leading-relaxed">
-            사장님의 사업비라면, 월 최대 {formatWon(TOTAL_CAP)}P까지 적립할 수
+            사장님의 지출금액이라면, 월 최대 {formatWon(TOTAL_CAP)}P까지 적립할 수
             있습니다.
           </p>
           <p className="mt-2 text-xs leading-relaxed text-white/50">
