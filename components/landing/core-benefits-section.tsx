@@ -66,7 +66,7 @@ export function CoreBenefitsSection() {
             <CountUp value={50000} />P
           </p>
         </div>
-        <div className="rounded-2xl border border-point/40 bg-point/10 p-6 backdrop-blur-md">
+        <div className="glass-point rounded-2xl p-6">
           <p className="text-sm text-point-foreground/70">사업영역 통합 월 최대</p>
           <p className="mt-2 text-xl font-black text-point-foreground">
             <CountUp value={200000} />P

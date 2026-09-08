@@ -70,10 +70,8 @@ function BenefitBlock({
   const example = Math.min(item.example * 0.02, ITEM_CAP)
   return (
     <div
-      className={`group relative flex h-full items-center gap-3 rounded-2xl p-4 ${
-        special
-          ? 'border border-point/40 bg-point/10 backdrop-blur-md'
-          : `glass-card glow-hover ${accentGlow}`
+      className={`group glow-hover relative flex h-full items-center gap-3 rounded-2xl p-4 ${
+        special ? 'glass-point glow-point' : `glass-card ${accentGlow}`
       }`}
     >
       <span
@@ -192,7 +190,7 @@ export function IndustrySelectSection({
             </div>
 
             {/* 강조 영역 */}
-            <div className="rounded-3xl border border-point/40 bg-point/10 p-6 backdrop-blur-md">
+            <div className="glass-point rounded-3xl p-6">
               <p className="text-xs font-bold uppercase tracking-widest text-point-foreground/70">
                 특화 혜택
               </p>
