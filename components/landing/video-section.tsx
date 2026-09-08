@@ -30,7 +30,7 @@ export function VideoSection() {
             {playing ? (
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/BlCqynPUH14?autoplay=1&cc_load_policy=0"
+                src="https://www.youtube.com/embed/Z1gqkYGnU8A?autoplay=1&cc_load_policy=0"
                 title="IBK B-RETAIL·B-F&B 카드 소개 영상"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

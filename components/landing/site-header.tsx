@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/40 bg-background/60 backdrop-blur-xl backdrop-saturate-150">
+    <header className="relative z-40 border-b border-white/40 bg-background/60 backdrop-blur-xl backdrop-saturate-150">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <a href="#top" className="flex items-center gap-2.5">
           <Image
