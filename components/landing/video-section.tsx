@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import Image from 'next/image'
-import { useState } from 'react'
-import { Play, RotateCcw } from 'lucide-react'
-import { CARDS } from '@/lib/card-data'
+import Image from 'next/image';
+import { useState } from 'react';
+import { Play, RotateCcw } from 'lucide-react';
+import { CARDS } from '@/lib/card-data';
 
 export function VideoSection() {
-  const [playing, setPlaying] = useState(false)
+  const [playing, setPlaying] = useState(false);
 
   return (
     <section className="bg-secondary/20 py-20 lg:py-28">
@@ -28,15 +28,13 @@ export function VideoSection() {
         <div className="mx-auto mt-10 max-w-3xl">
           <div className="relative aspect-video overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-[#22b8cf] via-[#5b74f2] to-[#8a5cf0]">
             {playing ? (
-              <video
+              <iframe
                 className="h-full w-full"
-                controls
-                autoPlay
-                aria-label="IBK B-RETAIL·B-F&B 카드 소개 영상"
-              >
-                <source src="" type="video/mp4" />
-                브라우저가 영상 재생을 지원하지 않습니다.
-              </video>
+                src="https://www.youtube.com/embed/BlCqynPUH14?autoplay=1&cc_load_policy=0"
+                title="IBK B-RETAIL·B-F&B 카드 소개 영상"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             ) : (
               <>
                 <div className="absolute inset-0 flex items-center justify-center gap-6 opacity-40">
@@ -88,5 +86,5 @@ export function VideoSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
