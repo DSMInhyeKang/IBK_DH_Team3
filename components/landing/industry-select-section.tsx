@@ -167,7 +167,7 @@ export function IndustrySelectSection({
 
           {/* 우측: 혜택 블록 */}
           <div className="flex h-full flex-col gap-5">
-            <div className="glass-panel flex-1 rounded-3xl p-6">
+            <div className="glass-panel flex flex-1 flex-col rounded-3xl p-6">
               <div className="flex items-baseline justify-between">
                 <p className="text-sm font-bold text-muted-foreground">
                   핵심 혜택 · 사업영역
@@ -176,7 +176,7 @@ export function IndustrySelectSection({
                   <CountUp value={2} suffix="%" format={false} />
                 </p>
               </div>
-              <div className="mt-5 grid auto-rows-fr gap-3 sm:grid-cols-2 lg:gap-2.5">
+              <div className="mt-5 grid flex-1 auto-rows-fr gap-3 sm:grid-cols-2 lg:gap-2.5">
                 {items.map((item) => (
                   <BenefitBlock
                     key={item.id}

@@ -245,8 +245,28 @@
     border-color: color-mix(in oklab, var(--point) 78%, white);
     box-shadow:
       0 12px 26px -14px color-mix(in oklab, var(--point) 48%, transparent),
-      0 0 0 1px color-mix(in oklab, var(--point) 30%, transparent),
+      0 0 22px 0 color-mix(in oklab, var(--point) 42%, transparent),
+      0 0 0 1px color-mix(in oklab, var(--point) 40%, transparent),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  }
+
+  /* --primary(블루) 컬러로 틴트된 유리 표면 — 강조용 단색 블록을 유리로 대체 */
+  .glass-primary {
+    background-image: linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--primary) 30%, transparent),
+      color-mix(in oklab, var(--primary) 12%, transparent)
+    );
+    backdrop-filter: blur(18px) saturate(170%);
+    -webkit-backdrop-filter: blur(18px) saturate(170%);
+    border: 1px solid color-mix(in oklab, var(--primary) 55%, white);
+    box-shadow:
+      0 8px 18px -14px color-mix(in oklab, var(--primary) 42%, transparent),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
   }
 
   /* 컬러 그라데이션 패널 내부에서 쓰는 밝은 유리 하이라이트 */
@@ -269,7 +289,8 @@
     border-color: color-mix(in oklab, var(--brand-retail) 55%, white);
     box-shadow:
       0 12px 26px -14px color-mix(in oklab, var(--brand-retail) 45%, transparent),
-      0 0 0 1px color-mix(in oklab, var(--brand-retail) 24%, transparent),
+      0 0 22px 0 color-mix(in oklab, var(--brand-retail) 38%, transparent),
+      0 0 0 1px color-mix(in oklab, var(--brand-retail) 40%, transparent),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
   }
   .glow-fnb:hover {
@@ -277,7 +298,8 @@
     border-color: color-mix(in oklab, var(--brand-fnb) 55%, white);
     box-shadow:
       0 12px 26px -14px color-mix(in oklab, var(--brand-fnb) 45%, transparent),
-      0 0 0 1px color-mix(in oklab, var(--brand-fnb) 24%, transparent),
+      0 0 22px 0 color-mix(in oklab, var(--brand-fnb) 38%, transparent),
+      0 0 0 1px color-mix(in oklab, var(--brand-fnb) 40%, transparent),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
   }
   .glow-primary:hover {
@@ -285,7 +307,8 @@
     border-color: color-mix(in oklab, var(--primary) 50%, white);
     box-shadow:
       0 12px 28px -14px color-mix(in oklab, var(--primary) 45%, transparent),
-      0 0 0 1px color-mix(in oklab, var(--primary) 24%, transparent),
+      0 0 22px 0 color-mix(in oklab, var(--primary) 38%, transparent),
+      0 0 0 1px color-mix(in oklab, var(--primary) 40%, transparent),
       inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
   }
 }

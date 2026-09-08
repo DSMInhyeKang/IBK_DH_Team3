@@ -16,17 +16,17 @@ function RateCard({
   return (
     <div
       className={`flex flex-col justify-between rounded-2xl p-6 ${
-        highlight
-          ? 'border border-primary/30 bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25 backdrop-blur-md'
-          : 'glass-card'
+        highlight ? 'glass-primary glow-primary' : 'glass-card'
       }`}
     >
       <span
-        className={`text-sm font-semibold ${highlight ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}
+        className={`text-sm font-semibold ${highlight ? 'text-primary/80' : 'text-muted-foreground'}`}
       >
         {label}
       </span>
-      <span className="mt-6 text-5xl font-black tracking-tight">
+      <span
+        className={`mt-6 text-5xl font-black tracking-tight ${highlight ? 'text-primary' : 'text-ink'}`}
+      >
         <CountUp value={rate} suffix="%" format={false} />
       </span>
     </div>
