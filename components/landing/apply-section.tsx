@@ -33,7 +33,7 @@ function ApplyCard({ cardId }: { cardId: CardId }) {
         href={card.applyUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`mt-6 inline-flex w-full items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-bold text-white transition-transform hover:-translate-y-0.5 ${card.accentBg}`}
+        className={`mt-6 inline-flex w-full items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-bold text-white ${card.accentBg}`}
       >
         {card.name} 신청하기
         <ArrowUpRight className="h-4 w-4" />

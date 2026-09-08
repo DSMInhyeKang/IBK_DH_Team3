@@ -33,7 +33,7 @@ function NumberInput({
           const next = digits ? Number.parseInt(digits, 10) : 0
           onChange(Math.min(next, 99_999_999))
         }}
-        className={`w-full rounded-xl border border-white/50 bg-white/50 py-3 pl-4 pr-10 text-right text-base font-bold text-ink outline-none backdrop-blur-md transition-shadow focus:ring-2 ${accentRing}`}
+        className={`w-full rounded-xl border border-slate-300/55 bg-white/50 py-3 pl-4 pr-10 text-right text-base font-bold text-ink outline-none backdrop-blur-md transition-shadow focus:ring-2 ${accentRing}`}
       />
       <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-muted-foreground">
         원
@@ -93,7 +93,7 @@ export function SimulationSection({
       </div>
 
       {/* 카드 선택 토글 */}
-      <div className="glass-chip mt-8 inline-flex rounded-full p-1">
+          <div className="glass-chip mt-8 inline-flex rounded-full border border-border/70 !bg-secondary p-1">
         {(['retail', 'fnb'] as CardId[]).map((id) => {
           const c = CARDS[id]
           const active = selectedCard === id
@@ -141,7 +141,7 @@ export function SimulationSection({
                   <NumberInput
                     value={relevantAmounts[item.id] ?? 0}
                     onChange={(v) => setAmount(item.id, v)}
-                    accentRing={card.accentRing}
+                      accentRing={card.accentRing}
                   />
                 </div>
               )
@@ -225,9 +225,10 @@ export function SimulationSection({
             사장님의 사업비라면, 월 최대 {formatWon(TOTAL_CAP)}P까지 적립할 수
             있습니다.
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-white/50">
+          <p className="mt-2 text-xs leading-relaxed text-white/50">
             ※ 전월실적 및 적립 대상 거래 등 카드 이용조건을 충족하고 적립한도 내에서
-            적용됩니다. 실제 수치는 최신 상품설명서 기준으로 확인하세요.
+            적용됩니다. 
+            <br></br>&nbsp;&nbsp;&nbsp;&nbsp; 실제 수치는 최신 상품설명서 기준으로 확인하세요.
           </p>
         </div>
       </div>

@@ -16,7 +16,7 @@ function RateCard({
   return (
     <div
       className={`flex flex-col justify-between rounded-2xl p-6 ${
-        highlight ? 'glass-primary glow-primary' : 'glass-card'
+        highlight ? 'glass-primary' : 'glass-card'
       }`}
     >
       <span
