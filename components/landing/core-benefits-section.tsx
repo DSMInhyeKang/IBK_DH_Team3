@@ -75,9 +75,8 @@ export function CoreBenefitsSection() {
       </div>
 
       {/* 혜택 구조 시각화 */}
-      <div className="glass-panel mt-16 overflow-hidden rounded-3xl">
-        <div className="grid lg:grid-cols-[1fr_auto_1fr]">
-          <div className="p-8">
+      <div className="mt-16 grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
+        <div className="glass-card rounded-3xl p-8 shadow-sm">
             <p className="text-sm font-bold text-muted-foreground">
               공통 사업영역
             </p>
@@ -95,13 +94,13 @@ export function CoreBenefitsSection() {
             <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
               <ArrowDown className="h-4 w-4" />2% 적립
             </div>
-          </div>
+        </div>
 
-          <div className="flex items-center justify-center border-border bg-secondary/40 px-6 py-4 lg:border-x">
-            <span className="text-sm font-black text-muted-foreground">+</span>
-          </div>
+        <div className="flex items-center justify-center px-2 py-1 lg:px-1">
+          <span className="text-sm font-black text-muted-foreground">+</span>
+        </div>
 
-          <div className="p-8">
+        <div className="glass-card rounded-3xl p-8 shadow-sm">
             <p className="text-sm font-bold text-muted-foreground">
               카드별 특화 혜택
             </p>
@@ -121,7 +120,6 @@ export function CoreBenefitsSection() {
                 <span className="text-sm font-black text-brand-fnb">2%</span>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>

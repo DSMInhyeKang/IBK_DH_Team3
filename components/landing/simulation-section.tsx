@@ -162,7 +162,7 @@ export function SimulationSection({
           className={`flex flex-col overflow-hidden rounded-3xl bg-gradient-to-br p-6 text-white sm:p-8 ${card.panelGradient}`}
         >
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <p className="text-sm font-semibold text-white/70">
+            <p className="text-md font-semibold text-white/70">
               {card.name} 사장님의 예상 월 적립
             </p>
             <span className="rounded-full bg-white/15 px-3 py-1 text-sm font-semibold">
