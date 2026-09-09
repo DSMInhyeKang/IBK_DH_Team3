@@ -29,8 +29,8 @@ export function SiteHeader() {
           <a href="#simulation" className="transition-colors hover:text-ink">
             혜택 시뮬레이션
           </a>
-          <a href="#apply" className="transition-colors hover:text-ink">
-            카드 신청
+          <a href="#video" className="transition-colors hover:text-ink">
+            카드 소개
           </a>
         </nav>
         <a

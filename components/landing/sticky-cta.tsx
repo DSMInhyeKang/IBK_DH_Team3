@@ -10,7 +10,7 @@ export function StickyCta({ selectedCard }: { selectedCard: CardId }) {
   const other = CARDS[selectedCard === 'retail' ? 'fnb' : 'retail']
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 700)
+    const onScroll = () => setVisible(window.scrollY > 550)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
