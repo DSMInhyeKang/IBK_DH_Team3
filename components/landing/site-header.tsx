@@ -1,10 +1,31 @@
 'use client'
 
 import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
 
 export function SiteHeader() {
+  const [hidden, setHidden] = useState(false)
+  const previousScrollY = useRef(0)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const currentScrollY = window.scrollY
+      const scrollingDown = currentScrollY > previousScrollY.current
+
+      setHidden(currentScrollY > 64 && scrollingDown)
+      previousScrollY.current = currentScrollY
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
-    <header className="relative z-40 border-b border-white/40 bg-background/60 backdrop-blur-xl backdrop-saturate-150">
+    <header
+      className={`sticky top-0 z-40 border-b border-white/40 bg-background/60 backdrop-blur-xl backdrop-saturate-150 transition-transform duration-300 ${
+        hidden ? '-translate-y-full' : 'translate-y-0'
+      }`}
+    >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <a href="#top" className="flex items-center gap-2.5">
           <Image
