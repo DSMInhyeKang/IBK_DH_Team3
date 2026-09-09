@@ -88,7 +88,7 @@ export function HeroSection() {
           <div className="mt-9 flex flex-wrap gap-3">
             <a
               href="#select"
-              className="rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/25 transition-transform hover:-translate-y-0.5"
+              className="rounded-full border border-white/45 bg-gradient-to-br from-primary via-primary/90 to-primary/70 px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/25 backdrop-blur-md transition-[filter,box-shadow] hover:brightness-105 hover:shadow-primary/30"
             >
               내 업종에 맞는 카드 찾기
             </a>
@@ -109,6 +109,7 @@ export function HeroSection() {
                 alt="IBK B-RETAIL 카드"
                 width={520}
                 height={520}
+                loading="eager"
                 priority
                 className="drop-shadow-2xl"
               />
@@ -119,6 +120,7 @@ export function HeroSection() {
                 alt="IBK B-F&B 카드"
                 width={520}
                 height={520}
+                loading="eager"
                 priority
                 className="drop-shadow-2xl"
               />
